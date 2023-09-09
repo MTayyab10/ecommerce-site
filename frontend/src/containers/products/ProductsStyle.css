@@ -1,0 +1,141 @@
+
+/* SearchBar.js CSS */
+
+.searchBar input {
+    height: 40px;
+}
+
+/* DisplayProducts.js CSS */
+
+.card1 {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.card1:hover {
+    transform: scale(1.03);
+}
+
+/* For Notifications  */
+
+/*.product {*/
+/*    position: relative;*/
+/*}*/
+
+/* To notify for NEW products */
+
+.notify-badge {
+    position: absolute;
+    right: 0;
+
+}
+
+.sold-out-notify {
+    position: absolute;
+    top: 40px;
+    left: 35px;
+}
+
+/* To notify for DISCOUNTED products */
+
+.notify-badge2 {
+    position: absolute;
+    left: 0;
+
+}
+
+/* Img resize */
+
+img {
+    float: left;
+    width: 100px;
+    height: 105px; /* 100px to 110 is best */
+}
+
+/* for loading images on scroll with LazyLoadImage */
+
+LazyLoadImage {
+    float: left;
+    width: 100px;
+    height: 105px; /* 100px to 110 is best */
+}
+
+/* padding for all product info like name, descp, price */
+
+.product-detail {
+    padding-left: 3px;
+}
+
+/* Shop Detail, ShopProduct.js CSS */
+
+.info {
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+    padding-top: 13px;
+}
+
+.address {
+
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+
+    line-height: 11px;
+    /*letter-spacing: 0.10em;*/
+
+    color: #2B283A;
+}
+/* location icon from fontawesome */
+.map-color {
+    /*color: #0000f9;*/
+    padding-right: 5px;
+}
+
+.map {
+
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 12px;
+    padding-left: 13px;
+
+    text-decoration-line: underline;
+    text-transform: none;
+    letter-spacing: 0;
+
+    color: #918E9B;
+}
+
+.shop-name {
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #2B283A
+}
+
+
+.business-timing {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 12px;
+
+    padding-top: 4px;
+    color: #2B283A;
+}
+
+.deliver-timing {
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 15px */
+
+    padding-top: 3px;
+    color: #2B283A;
+}

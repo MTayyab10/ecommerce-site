@@ -1,0 +1,25 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore local development environment files
+.env
+
+# Ignore generated build directories (for JavaScript, compiled code, etc.)
+build/
+dist/
+node_modules/
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+
+# Ignore log and cache files
+*.log
+*.sqlite3
+*.pyc
+!/backend/db.sqlite3
+/backend/db.sqlite3
