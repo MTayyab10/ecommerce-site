@@ -40,13 +40,11 @@ DEBUG = True
 # DEBUG = False
 
 ALLOWED_HOSTS = [
-
     "*" # for all hosts
     # 'http://127.0.0.1:8000',
     # 'http://localhost:3000',
     # 'http://localhost:8000',
     # 'http://127.0.0.1:3000',
-
 ]
 
 # Application definition
@@ -76,6 +74,9 @@ INSTALLED_APPS = [
     'social_django',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
+
+    # Swagger
+    'drf_yasg',
 
     'django.contrib.admin',
     'django.contrib.auth',
