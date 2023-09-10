@@ -15,6 +15,7 @@ from pathlib import Path
 
 # for force_text err
 import django
+
 # from django.utils.encoding import force_str
 
 # django.utils.encoding.force_text = force_str
@@ -34,18 +35,19 @@ from decouple import config
 
 SECRET_KEY = config('SECRET_KEY')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # DEBUG = False
 
-# For Heroku deployment
-ALLOWED_HOSTS = ["myshopnow.herokuapp.com",
-                 'maifast.com',
-                 'http://127.0.0.1:8000',
-                 'http://localhost:3000',
-                 'http://127.0.0.1:3000',
-                 '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+
+    "*" # for all hosts
+    # 'http://127.0.0.1:8000',
+    # 'http://localhost:3000',
+    # 'http://localhost:8000',
+    # 'http://127.0.0.1:3000',
+
+]
 
 # Application definition
 
@@ -92,34 +94,18 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
-    'http://localhost:3000',
     'http://127.0.0.1:3000',
-
-    # for production
-    # as have two domains:
-    # maifast.com / www.maifast.com
-    'https://maifast.com',
-    'https://www.maifast.com',
-    
-    # by default heroku 
-    'https://myshopnow.herokuapp.com'
+    'http://localhost:8000',
+    'http://localhost:3000',
 ]
 
 # In Django 4.x versions
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
-    'http://localhost:3000',
     'http://127.0.0.1:3000',
-     # for production
-
-    # 'https://maifast.com',
-    # as have two domains:
-    # maifast.com / www.maifast.com
-    # 'https://www.maifast.com'
-    
-    # by default heroku 
-    # 'https://myshopnow.herokuapp.com'
+    'http://localhost:8000',
+    'http://localhost:3000',
 ]
 
 MIDDLEWARE = [
@@ -187,7 +173,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -211,7 +196,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Karachi'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -325,12 +310,12 @@ AUTH_USER_MODEL = "accounts0.UserAccount"
 
 # EMAIL Section (using gmail) - for Activation account & Reset Passwords
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'mt800045@gmail.com'
-EMAIL_HOST_PASSWORD = 'pyphdfcstxkoyons'
-EMAIL_USE_TLS = True
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -359,19 +344,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
-# Images/video to store in cloudinary (cloud) for heroku
+# Images/video to store in cloudinary (cloud)
 
 # https://cloudinary.com/console/c-8d745b7e188aad8897287d215159e2
 # https://pypi.org/project/django-cloudinary-storage/
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dghodpjpo',
-    'API_KEY': '982843967281241',
-    'API_SECRET': 'cMcp4LWRvyNdsyY5Rbp0TiH4RD0'
+    'CLOUD_NAME': config('CLOUD_NAME'),
+    'API_KEY': config('API_KEY'),
+    'API_SECRET': config('API_SECRET')
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
