@@ -12,16 +12,14 @@ const FrequentlyAskedQuestions = () => {
                 <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Where is MaiFast available?
+                        What is E-Shop?
                     </button>
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show"
                      aria-labelledby="headingOne"
                      data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        Right now only available in <strong>Tatlay
-                        Aali</strong>. Stay tuned for more info.
-                        {/*Soon we will in more cities. */}
+                         Website or platform where products or services are sold over the internet.
 
                     </div>
                 </div>
@@ -59,10 +57,10 @@ const FrequentlyAskedQuestions = () => {
                      aria-labelledby="headingThree"
                      data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        After creating order in 5 minutes you can cancel order.
-                        For cancelling order go to <a href="https://www.maifast.com/account">
-                           Account
-                         </a > click on cancel button.
+                        After creating order in 3 minutes you can cancel order.
+                        For cancelling order go to
+                           Account > My Orders > Cancel Order
+                        click on cancel button.
 
                     </div>
                 </div>
@@ -84,9 +82,9 @@ const FrequentlyAskedQuestions = () => {
                     <div className="accordion-body">
                         We do our best to provide you with all the help you
                         may need in our FAQs. If you still need help
-                        please <Link to={'/help'}
+                        please <Link to={''}
                                      className={""}>
-                        Contact us</Link>.
+                        contact us</Link>.
                     </div>
                 </div>
 

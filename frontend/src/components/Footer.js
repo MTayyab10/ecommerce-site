@@ -51,7 +51,7 @@ const Footer = () => {
                                 </li>
 
                                 <li className={"small text-muted mb-1"}>
-                                    <Link to={'/help'}
+                                    <Link to={'/'}
                                           className={" text-decoration-none text-reset"}>
                                         Need help
                                     </Link>
@@ -65,14 +65,14 @@ const Footer = () => {
 
                             <ul className="list-unstyled">
                                 <li className={"small text-muted mb-1"}>
-                                    <Link to={'/terms_of_use'}
+                                    <Link to={'/'}
                                           className={" text-decoration-none text-reset"}>
                                         Terms of use
                                     </Link>
                                 </li>
 
                                 <li className={"small text-muted"}>
-                                    <Link to={'/privacy_policy'}
+                                    <Link to={'/'}
                                           className={" text-decoration-none text-reset"}>
                                         Privacy policy
                                     </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <div className="col-md-12">
                     <div className="border-top pt-2 pb-1">
                         <p>
-                            MaiFast &copy; {(new Date().getFullYear())}
+                            E-Shop &copy; {(new Date().getFullYear())}
                         </p>
                     </div>
                 </div>

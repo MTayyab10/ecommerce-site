@@ -33,8 +33,6 @@ import DeliveryAddress from "./containers/DeliveryAddress"
 import UpdateDeliveryAddress from "./components/delivery_address/UpdateDeliveryAddress"
 import DisplayOrders from "./containers/orders/DisplayOrders"
 import SpecificOrderDetail from "./containers/orders/SpecificOrderDetail"
-import PrivacyPolicy from "./components/legal/PrivacyPolicy"
-import TermsOfUse from "./components/legal/TermsOfUse"
 import HelpCenter from "./components/HelpCenter"
 
 const App = () => (
@@ -102,9 +100,6 @@ const App = () => (
 
                 <Route exact path={'/order/:id'} element={<SpecificOrderDetail />} />
 
-                {/* Legal info */}
-                <Route exact path={'/privacy_policy'} element={<PrivacyPolicy />} />
-                <Route exact path={'/terms_of_use'} element={<TermsOfUse />} />
 
                 {/* If none path matched then redirect to NotFound */}
                 <Route path="*" element={<NotFound/>}/>

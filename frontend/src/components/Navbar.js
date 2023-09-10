@@ -108,7 +108,7 @@ const Navbar = ({isAuthenticated, user, logout, total_items, orders}) => {
             <div className="container-fluid">
 
                 <Link className="navbar-brand" to="/">
-                    MaiFast
+                    E-Shop
                 </Link>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
