@@ -5,7 +5,7 @@ User = get_user_model()
 
 # Header Name
 
-admin.site.site_header = "MaiFast Admin"
+admin.site.site_header = "Ecommerce Admin"
 
 # Apps Ordering in DjangoAdmin
 
