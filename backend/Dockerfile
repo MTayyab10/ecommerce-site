@@ -5,7 +5,7 @@ FROM python:3.9.13-slim-buster
 ENV PYTHONUNBUFFERED=1
 
 # Create and set the working directory
-WORKDIR /api
+WORKDIR /backend
 
 # RUN pip install django django-cors-headers
 
@@ -13,7 +13,7 @@ WORKDIR /api
 RUN apt-get update && apt-get install -y libpq-dev gcc
 
 # Install Python dependencies
-COPY requirements.txt /api/
+COPY requirements.txt /backend/
 RUN pip install --no-cache-dir -r requirements.txt
 
 

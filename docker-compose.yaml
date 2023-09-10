@@ -1,14 +1,23 @@
 version: '3'
 
 services:
-  api:
+  backend:
     build: ./backend
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/api
+      - ./backend:/backend
 
     command: bash -c "python manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000" # React runs on port 3000
+    volumes:
+      - ./frontend:/app
+    command: npm start
 
 
 volumes:
