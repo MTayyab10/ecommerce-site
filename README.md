@@ -28,6 +28,13 @@ To get started with development, follow these steps:
 
 5. Start working on your project by making changes to the frontend and backend code.
 
+### Explore API with Swagger
+
+Discover and interact with API using Swagger, 
+a user-friendly interface for testing and understanding our endpoints.
+Visit the Swagger UI at http://localhost:8000/swagger/.
+
+
 ## Project Structure
 
 - `/frontend`: Contains the frontend code.
